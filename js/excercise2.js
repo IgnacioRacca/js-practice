@@ -13,27 +13,48 @@ console.log('Excercise 2b. use substring to cut ' +string+ ' leaving only '  + s
 
 // Excercise 2c
 
-stringCut= string.substring(8,11);
-console.log('Excercise 2c. use substring to cut ' +string+ ' leaving only '  + stringCut);
+if (string.length >=10) {
+    stringCut= string.substring((string.length-3),string.length);
+    console.log('Excercise 2c. use substring to cut ' +string+ ' leaving only '  + stringCut);
+} else {
+    console.log('Excercise 2c. string length is not enough');
+}
 
 // Excercise 2d
 
 var string2;
 
-string2= string.toUpperCase(0,1).substring(0,1)+string.toLowerCase(1,11).substring(1,11);
+if (string.length >=10) {
+    string2= string.toUpperCase().substring(0,1)+string.toLowerCase(1,11).substring(1,11);
 console.log('Excercise 2d. ' +string+ ' convert to '  + string2);
+} else {
+    console.log('Excercise 2d. string length is not enough');
+}
+
 
 // Excercise 2e
 
-console.log('Excercise 2e. ' +string+ ' find the position of the first " " is: '  + string.indexOf(' ', 0));
+var save;
+
+if (string.length >=10) {
+    save= string.indexOf(' ', 0);
+    console.log('Excercise 2e. ' +string+ ' find the position of the first " " is: '  + save);
+
+} else {
+    console.log('Excercise 2e. string length is not enough');
+}
+
+
 
 // Excercise 2f
 
 string= 'archeology philosophy';
-string2= string.toUpperCase(0,1).substring(0,1)+string.toLowerCase(0,10).substring(1,10) + string.toUpperCase(12,1).substring(12,10)+string.toLowerCase(12,21).substring(12,21) ;
-console.log('Excercise 2f. ' +string+ ' convert to '  + string2);
- 
 
+if (string.length >=21) {
+    save= string.indexOf(' ', 0);
+    string2= string.toUpperCase().substring(0,1)+string.toLowerCase(0,(save)).substring(1,(save)) + string.toUpperCase().substring((save),(save+2))+string.toLowerCase((save+2),string.length).substring((save+2),string.length);
+    console.log('Excercise 2f. ' +string+ ' convert to '  + string2);
+} else {
+    console.log('Excercise 2f. string length is not enough');
+}
 
-
-//+ string.toUpperCase(12,1).substring(13,21)+string.toLowerCase(13,21).substring(0,13) 
