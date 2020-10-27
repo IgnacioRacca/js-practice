@@ -15,13 +15,10 @@ for (let i = 0; i < array.length; i++) {
 
 //Excercise 5c
 
-var sentence= null;
+var sentence= '';
 
-if (sentence === null) {
-    sentence = array[0];
-    for (let i = 1; i < array.length; i++) {
-        sentence += array[i]; 
-    }
+for (let i = 1; i < array.length; i++) {
+    sentence += array[i];  
 }
 alert('Excercise 5c. '+ sentence);
 

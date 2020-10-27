@@ -47,12 +47,14 @@ if (string.length >=10) {
 
 
 // Excercise 2f
-
+var n,m;
 string= 'archeology philosophy';
 
 if (string.length >=21) {
     save= string.indexOf(' ', 0);
-    string2= string.toUpperCase().substring(0,1)+string.toLowerCase(0,(save)).substring(1,(save)) + string.toUpperCase().substring((save),(save+2))+string.toLowerCase((save+2),string.length).substring((save+2),string.length);
+    n= string.toUpperCase().substring(0,1)+string.toLowerCase(0,(save)).substring(1,(save));
+    m= string.toUpperCase().substring((save),(save+2))+string.toLowerCase((save+2),string.length).substring((save+2),string.length);
+    string2= n + m;
     console.log('Excercise 2f. ' +string+ ' convert to '  + string2);
 } else {
     console.log('Excercise 2f. string length is not enough');
